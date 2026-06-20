@@ -2,12 +2,13 @@ class MyQueue {
 public:
 stack<int>input;
 stack<int>output;
+
     MyQueue() {
         
     }
     
     void push(int x) {
-        input.push(x);     
+    input.push(x);            
     }
     
     int pop() {
@@ -16,11 +17,10 @@ stack<int>output;
                 output.push(input.top());
                 input.pop();
             }
-        }int outputVal=output.top();
-        output.pop();
-        return outputVal;
-       
-        
+        }
+        int outPut=output.top();
+            output.pop();
+        return outPut;
     }
     
     int peek() {
@@ -28,9 +28,9 @@ stack<int>output;
             while(!input.empty()){
                 output.push(input.top());
                 input.pop();
-
             }
-        }return output.top();
+        }
+        return output.top();
         
     }
     
